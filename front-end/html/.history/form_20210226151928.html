@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>student registration form</title>
+</head>
+<body>
+
+
+    <img src="mm.png"  alt="" style="border-radius: 50%; width: 50%; margin-left:auto; margin-right: auto ;  diplay:block; align-items: center; text-align: center;">
+    <h1>
+        <u>REGISTRATION FORM</u>
+    </h1>
+    <form>
+    <p>
+        <label for="name">FIRST NAME:</label>
+    <input type="text" placeholder="Enter first name" name="name" id="name" min="30" max="30">
+    <small>(max 30 charector A-Z and a-z)</small>
+    </p>
+
+    <p>
+        <label for="name">LAST NAME:</label>
+        <input type="text" placeholder="Enter last name" name="name" id="name" min="30" max="30">
+        <small>(max 30 charector A-Z and a-z)</small>
+    </p>
+
+    <p><label for="birthday">DATE OF BIRTH:</label>
+        <input type="date" id="birthday" name="birthday"></p>
+
+    <p><label for="email">EMAIL ID:</label>
+        <input type="email" id="email" name="email"></p>
+
+    <p><label for="phone">MOBILE NO:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter mobile no">
+        <small>(10 digits number)</small></p>
+
+        <label for="text">GENDAR:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        
+    <p><label for="address"> ADDRESS :</label>
+        <textarea id="adress" name="address" rows="4" cols="50">
+            </textarea></p>
+
+    <p><label for="text"> CITY:</label>
+        <input type="text" placeholder="Enter your city name" id="city" name="city"></p>
+    
+    <p><label for="number">PIN CODE:</label>
+        <input type="number" placeholder="Enter pin code" id="pin code" name="pin code" >
+        <small>(6 digits number)</small></p>
+    
+    <p><label for="text"> STATE:</label>
+        <input type="text" placeholder="Enter your state name" id="city" name="city"></p>
+    
+    <p><label for="text"> COUNTRY:</label>
+        <input type="text" placeholder="Enter your country name" id="city" name="city"></p>
+    
+     
+        <label for="text">HOBBY:</label>
+        <input type="radio" value="dancing"> dancing
+        <input type="radio" value="singing"> singing
+        <input type="radio" value="reading"> reading
+        <input type="radio" value="sketching"> sketching
+        <input type="radio"value='other'>other:
+        <input type="text" placeholder="Enter any other hobby" name="fname">
+        <br>
+
+
+  
+    <table>  
+        <tr>
+            <td rowspan="5">QUALIFICATION :</td>
+            <td>SR.NO</td>
+            <td>Examination</td>
+            <td>Board</td>
+            <td>Percantage</td>
+            <td>Year Of Passing</td>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>class X</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>class XII</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr> 
+            <td>3.</td>
+            <td>Graduation</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>  
+            <td>4.</td>
+            <td>Master</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>  
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><small>(10 char max)</small></td>
+            <td><small>(upto decimal)</small></td>
+        </tr>
+    </table>
+
+
+        <label for="text">COURSES:</label>
+                <input type="radio" value="bca"> BCA
+                <input type="radio" value="b.com"> B.COM
+                <input type="radio" value="b.sc"> B.SC
+                <input type="radio" value="b.a"> B.A
+   
+   
+   
+    <p>      
+
+        <button class="btn btn-info" style="">submit</button>
+        <input type="submit" class="btn btn-primary">
+        <input type="reset" class="btn btn-secondary">
+        <input type="reset" class="btn btn-success">
+        <input type="reset" class="btn btn-danger">
+    </p>
+    </form>
+    
+</body>
+
+</html>

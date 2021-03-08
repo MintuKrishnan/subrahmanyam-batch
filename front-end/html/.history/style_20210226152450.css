@@ -1,0 +1,9 @@
+.image{
+    align-items: center;
+
+}
+img{
+    width: 50%;
+ 
+    border-radius: 50%;
+}

@@ -1,0 +1,152 @@
+.container {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  background: skyblue;
+  margin-top: 20px;
+}
+
+.container ul {
+  padding: 0px;
+  margin: 0px;
+}
+.property {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 300px;
+
+  margin: 20px 0px 20px 55px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container ul li .bottom1 {
+  background: red;
+}
+.container ul li .bottom2 {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 300px;
+  background: green;
+  margin: 20px 0px 20px 55px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  text-align: center;
+}
+.container ul li .bottom3 {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 300px;
+  background: blue;
+  margin: 20px 0px 20px 55px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  text-align: center;
+}
+.container ul li .bottom4 {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 300px;
+  background: lime;
+  margin: 20px 0px 20px 55px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  text-align: center;
+}
+.container ul li .bottom5 {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 300px;
+  background: pink;
+  margin: 20px 0px 20px 55px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  text-align: center;
+}
+.container ul li .bottom6 {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 300px;
+  background: teal;
+  margin: 20px 0px 20px 55px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  text-align: center;
+}
+.container ul li .bottom7 {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 300px;
+  background: indigo;
+  margin: 20px 0px 20px 55px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  text-align: center;
+}
+.container ul li .bottom8 {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 300px;
+  background: brown;
+  margin: 20px 0px 20px 55px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  text-align: center;
+}
+.container ul li .bottom9 {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 300px;
+  background: orange;
+  margin: 20px 0px 20px 55px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  text-align: center;
+}
+.container ul li .bottom10 {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 300px;
+  background: cyan;
+  margin: 20px 0px 20px 55px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  text-align: center;
+}
+.container ul li .bottom11 {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 300px;
+  background: purple;
+  margin: 20px 0px 20px 55px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  text-align: center;
+}
+.container ul li .bottom12 {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 300px;
+  background: grey;
+  margin: 20px 0px 20px 55px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container ul li:hover {
+  opacity: 0.8;
+}

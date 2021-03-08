@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  /* margin: auto; */
+  /* overflow: hidden; */
+  background-color: skyblue;
+  margin-top: 20px;
+}
+
+.container ul {
+  padding: 0px;
+  margin: 0px;
+}
+.property {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 300px;
+
+  margin: 20px 0px 20px 55px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container ul li .bottom1 {
+  background: red;
+}
+.container ul li .bottom2 {
+  background: green;
+}
+.container ul li .bottom3 {
+  background: blue;
+}
+.container ul li .bottom4 {
+  background: lime;
+}
+.container ul li .bottom5 {
+  background: pink;
+}
+.container ul li .bottom6 {
+  background: teal;
+}
+.container ul li .bottom7 {
+  background: indigo;
+}
+.container ul li .bottom8 {
+  background: rgb(130, 121, 0);
+}
+
+.container ul li:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,47 @@
+body {
+  background-color: skyblue;
+}
+.property {
+  /* float: left; */
+  /* display: inline-block; */
+  width: 20%;
+  height: 300px;
+  margin: 20px 0px 20px 55px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  text-align: center;
+}
+.fix {
+  position: fixed;
+}
+.sticky {
+  position: -webkit-sticky;
+  position: static;
+}
+.bottom1 {
+  background: red;
+}
+.bottom2 {
+  background: green;
+}
+.bottom3 {
+  background: blue;
+}
+.bottom4 {
+  background: lime;
+}
+.bottom5 {
+  background: pink;
+}
+.bottom6 {
+  background: teal;
+}
+.bottom7 {
+  background: indigo;
+}
+.bottom8 {
+  background: rgb(130, 121, 0);
+}
+.container ul li:hover {
+  opacity: 0.8;
+}
