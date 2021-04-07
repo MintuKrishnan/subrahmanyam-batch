@@ -16,10 +16,11 @@ function myFunction() {
     }
   }
 }
-let html = `<tr class="header">
-                <th style="width: 60%">First Name</th>
-                <th style="width: 40%">Last Name</th>
-            </tr>`;
+let html = '';
+// let html = `<tr class="header">
+//                 <th style="width: 60%">First Name</th>
+//                 <th style="width: 40%">Last Name</th>
+//             </tr>`;
 
 // fetch('https://jsonplaceholder.typicode.com/users')
 //   .then((response) => response.json())
@@ -53,7 +54,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
     </tr>
         `;
     });
-    document.getElementById('myTable').innerHTML = html;
+    document.querySelector('tbody').insertAdjacentHTML('beforeend', html);
   })
   .catch((e) => {
     console.log(e.message);
