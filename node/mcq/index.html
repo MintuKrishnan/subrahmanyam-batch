@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app" class="start">
+      <!-- LOADING -->
+      <section id="loading">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </section>
+      <!-- END LOADING -->
+
+      <!-- START -->
+      <section id="start">
+        <h2>TEST YOUR KNOWLEDGE NOW !</h2>
+        <div class="select_level">
+          <h4>CHOSE LEVEL:</h4>
+          <select id="select_level">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <!-- .select_level -->
+
+        <button class="btn" id="play">START NOW !</button>
+      </section>
+      <!-- END START -->
+
+      <!-- QUIZ -->
+      <section id="quiz">
+        <div id="quiz__progress">
+          <span id="quiz__index">1</span>/10 questions
+          <div class="progress__bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <!-- .quiz__progress -->
+
+        <div id="quiz__questions"></div>
+      </section>
+      <!-- END QUIZ -->
+
+      <!-- RESULT -->
+      <section id="result">
+        <h1>Congrats !</h1>
+        <div>
+          You get
+          <div class="result_num"><span id="result__correct">1</span>/10</div>
+          correct answers.
+        </div>
+        <button id="reset" class="btn">Play Again</button>
+      </section>
+      <!-- END RESULT -->
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

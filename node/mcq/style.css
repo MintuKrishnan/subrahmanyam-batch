@@ -1,0 +1,186 @@
+/* general */
+body {
+  background-color: #e0e5ec;
+  color: #000;
+}
+body ::selection {
+  background: transparent;
+}
+body ::-moz-selection {
+  background: transparent;
+}
+.btn {
+  display: block;
+  margin-top: 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9),
+    -0.2rem -0.2rem 0.4rem #fff;
+  font-weight: 700;
+  border: 0;
+  transition: 0.3s;
+}
+.btn:hover,
+.btn:focus {
+  color: #ff7025;
+}
+.btn:focus {
+  box-shadow: inset 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9),
+    inset -0.2rem -0.2rem 0.4rem #fff;
+}
+/* END general */
+/* content */
+#app {
+  max-width: 500px;
+  min-height: 400px;
+  height: max-content;
+  width: 100%;
+  margin: auto;
+  padding: 30px;
+  position: relative;
+  margin-top: 100px;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9),
+    -0.2rem -0.2rem 0.4rem #fff;
+  border-radius: 10px;
+}
+#app #start h2 {
+  margin-bottom: 50px;
+}
+#app #start #play {
+  flex: 1;
+  width: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+}
+#app #start .select_level {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+#app #start .select_level h4 {
+  margin: 0;
+}
+#app #start #select_level {
+  box-shadow: inset 0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9),
+    inset -0.2rem -0.2rem 0.4rem #fff;
+  border: 0;
+  background-color: inherit;
+  background-color: #efefef;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-right: 20px;
+  font-weight: 700;
+}
+#app #start #select_level:focus {
+  outline: none;
+}
+#app #quiz #quiz__questions .question {
+  min-height: 150px;
+}
+#app #quiz #quiz__questions .answers {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  height: max-content;
+}
+#app #quiz #quiz__questions .answers .btn {
+  padding: 25px 40px;
+  font-size: 18px;
+}
+#app #quiz #quiz__progress {
+  font-size: 12px;
+  overflow: hidden;
+  width: 100%;
+}
+#app #quiz #quiz__progress .progress__bar {
+  width: 100%;
+  height: 10px;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9),
+    inset -0.2rem -0.2rem 0.5rem #fff,
+    0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem #fff;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+#app #quiz #quiz__progress .progress {
+  background-color: #ff7025;
+  border-radius: 10px;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem #f8b639,
+    inset -0.2rem -0.2rem 0.5rem #ff4c00,
+    0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem #fff;
+  width: 0;
+  height: 10px;
+  transition: width 0.2s;
+}
+#app #result {
+  font-size: 20px;
+  text-align: center;
+}
+#app #result .result_num {
+  font-weight: 900;
+  font-size: 40px;
+  margin: 10px 0;
+}
+#app #result .btn {
+  margin: auto;
+  margin-top: 40px;
+  width: 50%;
+}
+#app #loading {
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+#app #loading .dot {
+  animation: loader 0.5s infinite linear;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(195, 193, 198, 0.9),
+    inset -0.2rem -0.2rem 0.5rem #fff,
+    0.3rem 0.3rem 0.5rem rgba(195, 193, 198, 0.9), -0.2rem -0.2rem 0.4rem #fff;
+}
+#app #loading .dot:nth-child(1) {
+  animation-delay: -0.6s;
+}
+#app #loading .dot:nth-child(2) {
+  animation-delay: -0.3s;
+}
+#app #loading .dot:nth-child(3) {
+  animation-delay: 0s;
+}
+@keyframes loader {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  75% {
+    transform: translateY(0.5rem);
+  }
+}
+#app > section {
+  display: none;
+}
+#app.start > #start {
+  display: block;
+}
+#app.quiz > #quiz {
+  display: block;
+}
+#app.result > #result {
+  display: block;
+}
+#app.loading {
+  display: grid;
+  place-items: center;
+}
+#app.loading > #loading {
+  display: flex;
+}
+/* END content */
