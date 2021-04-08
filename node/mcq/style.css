@@ -6,9 +6,7 @@ body {
 body ::selection {
   background: transparent;
 }
-body ::-moz-selection {
-  background: transparent;
-}
+
 .btn {
   display: block;
   margin-top: 20px;
@@ -164,15 +162,16 @@ body ::-moz-selection {
     transform: translateY(0.5rem);
   }
 }
-#app > section {
+#app section {
   display: none;
-}
-#app.start > #start {
-  display: block;
 }
 #app.quiz > #quiz {
   display: block;
 }
+#app.start > #start {
+  display: block;
+}
+
 #app.result > #result {
   display: block;
 }

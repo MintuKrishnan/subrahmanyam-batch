@@ -43,19 +43,62 @@ let html = '';
 //     document.getElementById('myTable').innerHTML = html;
 //   });
 
-fetch('https://jsonplaceholder.typicode.com/users')
-  .then((response) => response.json())
-  .then((array) => {
+// fetch('https://jsonplaceholder.typicode.com/users')
+//   .then((response) => response.json())
+//   .then((array) => {
+//     array.forEach((el) => {
+//       html += `
+//     <tr>
+//         <td>${el.name.split(' ')[0]}</td>
+//         <td>${el.name.split(' ')[1]}</td>
+//     </tr>
+//         `;
+//     });
+//     document.querySelector('tbody').insertAdjacentHTML('beforeend', html);
+//   })
+//   .catch((e) => {
+//     console.log(e.message);
+//   });
+
+const any = async () => {
+  try {
+    let a = await fetch('https://jsonplaceholder.typicode.com/users');
+    let array = await a.json();
     array.forEach((el) => {
       html += `
-    <tr>
-        <td>${el.name.split(' ')[0]}</td>
-        <td>${el.name.split(' ')[1]}</td>
-    </tr>
-        `;
+          <tr>
+              <td>${el.name.split(' ')[0]}</td>
+              <td>${el.name.split(' ')[1]}</td>
+          </tr>
+              `;
     });
-    document.querySelector('tbody').insertAdjacentHTML('beforeend', html);
-  })
-  .catch((e) => {
+    // document.querySelector('tbody').insertAdjacentHTML('beforeend', html);
+    document.querySelector('.header').insertAdjacentHTML('afterend', html);
+  } catch (e) {
     console.log(e.message);
-  });
+  }
+};
+any();
+
+// let a = 10;
+
+// const newf = () => {
+//   setTimeout(function () {
+//     a = a * 2;
+//   }, 3000);
+
+//   console.log(a);
+// };
+// console.log(a);
+
+// // newf();
+// const any = async () => {
+//   try {
+//     let a = await fetch('https://jsonplaceholder.typicode.com/users');
+//     console.log(await a.json());
+//   } catch (e) {
+//     console.log(e);
+//   }
+// };
+
+// any();
