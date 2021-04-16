@@ -1,76 +1,73 @@
 // const express = require('express');
 const fs = require('fs');
-// const path = require('path');
-// // import { express } from 'express';
-// const app = express();
-
-// app.get('/randomColor', function (req, res) {
-//   res.send('Hello World');
-// });
-// app.get('/currentData', function (req, res) {
-//   res.send('Hello data');
-// });
-// app.get('/joke', function (req, res) {
-//   res.send('Hello joke');
-// });
-// app.get('/quote', function (req, res) {
-//   res.send('Hello quote');
-// });
-
-// console.log('join: ', path.join(__dirname, '/package.json'));
-// console.log('resolve:', path.resolve('package.json'));
-
-// app.post;
-
-// app.listen(3000);
+const morgan = require('morgan');
 const express = require('express');
-const { parse } = require('path');
+const axios = require('axios');
+
 const app = express();
 
+app.use(morgan('dev'));
 app.use(express.json());
 
-// app.get('/category', (req, res) => {
-//   const { name } = req.query;
+const myname = (req, res, next) => {
+  req.debasis = 'debasis';
+  console.log('hii desh');
+  next();
+};
 
-//   if (name) {
-//     res.send(`Your name that server recieved = ${name}`);
-//     return;
-//   }
-//   res.send('Works');
-// });
+const getUserInfo = (req, res) => {
+  const data = fs.readFileSync('users.json', 'utf-8');
+  let users = JSON.parse(data);
+  console.log(req.debasis);
+  if (req.query.username) {
+    let response = users.filter((el) => {
+      return req.query.username == el.username;
+    });
+    res.json({ response });
+    return;
+  }
 
-// app.get('/category/:categoryName', (req, res) => {
-//   console.log(req.params);
-//   console.log(req.params.categoryName);
-//   res.send('Called from main category');
-// });
-
-// app.get('/category/:categoryName/:subCategory', (req, res) => {
-//   console.log(req.query.name);
-//   console.log(req.params.categoryName);
-//   res.send('Called from sub category');
-// });
-// let name = [];
-
-app.get('/userInfo', (req, res) => {
-  console.log(name);
-  res.status(200).json({ name });
-});
+  res.status(200).json({ users });
+};
 
 app.post('/userInfo', (req, res) => {
-  const { name } = req.body;
+  const data = fs.readFileSync('users.json', 'utf-8');
+  let users = JSON.parse(data);
+  const newUser = {
+    id: req.body.id || users.length + 1,
+    username: req.body.username,
+    age: req.body.age,
+  };
 
-  fs.appendFileSync('users.json', JSON.stringify(name));
-  console.log(name);
+  users.push(newUser);
+
+  fs.writeFileSync('users.json', JSON.stringify(users));
+  // console.log(name);
 
   res.status(201).json({
     status: 'Success',
-    name,
+    users,
   });
-  // res.send(`Server changed your name to ${req.body.name}`);
-  // const newData = { ...res.body };
-  // res.appendedValue = 'Express';
-  // console.log(newData);
 });
+
+app.get('/postWithComment', async (req, res) => {
+  const posts = await axios.get('https://jsonplaceholder.typicode.com/posts');
+  const comments = await axios.get(
+    'https://jsonplaceholder.typicode.com/comments'
+  );
+  const newusers = [];
+  for (i = 0; i < 10; i++) {
+    newusers.push(posts.data[i]);
+    newusers[i].comments = [];
+    start = 5 * i;
+    end = start + 5;
+    for (start; start < end; start++) {
+      newusers[i].comments.push(comments.data[start]);
+    }
+  }
+  res.send(newusers);
+});
+
+app.get('/userInfo', myname, getUserInfo);
 
 app.listen(3000, () => console.log('listening'));
