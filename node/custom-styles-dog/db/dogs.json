@@ -1,0 +1,30 @@
+{
+  "1": {
+    "name": "Tommy",
+    "age": 6,
+    "breed": "hound",
+    "weight": "15kg",
+    "OwnerName": "Raman Raj"
+  },
+  "2": {
+    "name": "Stud",
+    "age": 4,
+    "breed": "Labrador",
+    "weight": "10kg",
+    "OwnerName": "Ronak Singh"
+  },
+  "3": {
+    "name": "Brownie",
+    "age": 5,
+    "breed": "retriever",
+    "weight": "13kg",
+    "OwnerName": "Sonam Patel"
+  },
+  "4": {
+    "name": "Dan",
+    "age": 8,
+    "breed": "pug",
+    "weight": "8kg",
+    "OwnerName": "Ronit Roy"
+  }
+}
