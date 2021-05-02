@@ -5,7 +5,7 @@ if __name__ == "__main__":
 
 # read a matrix
 '''
-r, c = list(map(int, input().rstrip().split()))
+r, c = list(map(int, input().strip().split()))
 matrix = []
 for _ in range(r):
     arr = list(map(int, input().rstrip().split()))
@@ -20,14 +20,14 @@ str = input()
 
 # read 2 list
 '''
-m, n = list(map(int, input().rstrip().split()))
+m, n = list(map(int, input().strip().split()))
 
-l1 = list(map(int, input().rstrip().split()))
-l2 = list(map(int, input().rstrip().split()))
+l1 = list(map(int, input().strip().split()))
+l2 = list(map(int, input().strip().split()))
 '''
 
 # read 1 list
 '''
 n = int(input())
-arr = list(map(int, input().rstrip().split()))
+arr = list(map(int, input().strip().split()))
 '''
