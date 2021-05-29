@@ -1,27 +1,29 @@
+def minimal(str1, str2):
 
-def mex(A, n):
+    inf = float('inf')
+    prev = inf
+    ans = []
+    for i, j in enumerate(str1):
+        if str1[i] == str2:
+            prev = i
+        if (prev == inf):
+            ans.append(inf)
+        else:
+            ans.append(i - prev)
 
-    m = max(array)
+    prev = inf
+    s = " "
+    for i in range(len(str1) - 1, -1, -1):
+        if str1[i] == str2:
+            prev = i
+        if (str2 != inf):
+            ans[i] = str(min(ans[i], prev - i))
 
-    if n == 1:
-        return 2 if array[0] == 1 else 1
-
-    if m < 1:
-        return 1
-
-    new = [0] * m
-    for i in range(n):
-        if array[i] > 0:
-            if new[array[i] - 1] != 1:
-                new[array[i] - 1] = 1
-    for i in range(len(new)):
-
-        if new[i] == 0:
-            return i + 1
-    return i + 2
+    return s.join(ans)
 
 
 if __name__ == "__main__":
-    n = int(input())
-    array = list(map(int, input().strip().split()))
-    print(mex(array, n))
+    str1 = input()
+    str2 = input()
+
+    print(minimal(str1, str2))

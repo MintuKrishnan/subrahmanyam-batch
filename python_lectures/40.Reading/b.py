@@ -1,22 +1,26 @@
-def cheapBooks(k, price, cost):
-    n = len(cost)
-    table = [[0 for x in range(k + 1)] for x in range(n + 1)]
 
-    for i in range(n + 1):
-        for j in range(k + 1):
-            if i == 0 or j == 0:
-                table[i][j] = 0
-            elif price[i-1] <= j:
-                table[i][j] = max(cost[i-1]
-                                  + table[i-1][j-price[i-1]],  table[i-1][j])
-            else:
-                table[i][j] = table[i-1][j]
+def compare(str1, str2):
 
-    return table[n][k]
+    store = {}
+    for i in str1:
+        if i in store:
+            store[i] += 1
+        else:
+            store[i] = 1
+    for i in str2:
+        if i in store:
+            store[i] -= 1
+        else:
+            continue
+    count = 0
+
+    for key, val in store.items():
+        if val > 0:
+            count += val
+    return count
 
 
 if __name__ == "__main__":
-    n, k = list(map(int, input().strip().split()))
-    price = list(map(int, input().strip().split()))
-    cost = list(map(int, input().strip().split()))
-    print(cheapBooks(n, price, cost))
+    str1 = input()
+    str2 = input()
+    print(compare(str1, str2))
